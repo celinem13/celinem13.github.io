@@ -204,8 +204,8 @@ export const experiences = [
   {
     id: 'avenda-health',
     period: 'January 2022 — April 2022',
-    role: 'Augmented Reality Engineer',
-    company: 'Dynamic Augmented Solutions',
+    role: 'Software Engineering Intern',
+    company: 'Avenda Health',
     highlights: [
       'Developed a user-facing signup experience using JavaScript, HTML, and CSS.',
       'Processed and validated healthcare datasets supporting machine-learning workflows.',
@@ -215,8 +215,8 @@ export const experiences = [
   {
     id: 'cpp-it',
     period: 'September 2019 — November 2021',
-    role: 'Augmented Reality Engineer',
-    company: 'Dynamic Augmented Solutions',
+    role: 'IT Service Desk Student Assistant',
+    company: 'Cal Poly Pomona IT',
     highlights: [
       'Provided technical support for users by troubleshooting hardware, software, account, and connectivity issues.',
       'Set up and maintained computers, peripherals, and software while documenting recurring technical problems and solutions.',
@@ -226,8 +226,8 @@ export const experiences = [
   {
     id: 'coding-minds',
     period: 'October 2018 — September 2019',
-    role: 'Augmented Reality Engineer',
-    company: 'Dynamic Augmented Solutions',
+    role: 'Coding Instructor',
+    company: 'Coding Minds Academy',
     highlights: [
       'Taught C++, Java, and Python through hands-on programming projects.',
       'Covered OOP, data structures, algorithms, debugging, and problem-solving fundamentals.',
