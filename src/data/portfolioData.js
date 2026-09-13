@@ -70,12 +70,107 @@ export const projects = [
     ],
     repositoryUrl: 'https://github.com/celinem13/KaizoIronmonData',
   },
+  {
+    id: 'expression-parser',
+    category: 'Algorithms · Java',
+    title: 'Expression Parser Using Stacks',
+    description:
+      'A Java infix-to-postfix expression parser built with generic stack data structures, syntax validation, and automated test cases.',
+    technologies: [
+      'Java',
+      'OOP',
+      'Data Structures',
+      'Algorithms',
+      'Testing',
+    ],
+    highlights: [
+      'Implemented both array-backed and linked generic stack data structures.',
+      'Handles operator precedence, associativity, exponentiation, and nested parentheses.',
+      'Validates malformed expressions with exception handling and tests for edge cases.',
+    ],
+    repositoryUrl:
+      'https://github.com/celinem13/Expression-Parser-Using-Stacks-Java',
+  },
+  {
+    id: 'broncobuddies',
+    category: 'Full-stack application · Team project',
+    title: 'BroncoBuddies',
+    description:
+      'A full-stack social platform designed to help Cal Poly Pomona students connect through an online community.',
+    technologies: [
+      'React',
+      'Node.js',
+      'Express',
+      'MongoDB',
+      'REST APIs',
+      'Git',
+    ],
+    highlights: [
+      'Built and integrated user-facing React functionality with backend services.',
+      'Connected frontend components to Express APIs and persistent MongoDB data.',
+      'Collaborated through Git/GitHub while debugging frontend and backend integration.',
+    ],
+    repositoryUrl:
+      'https://github.com/gitgudorgitrekt/BroncoBuddies',
+  },
+  {
+    id: 'twitch-chat-automation',
+    category: 'Automation · C#',
+    title: 'Twitch Streamer.bot Chat Automation',
+    description:
+      'An interactive C# Twitch automation that generates D&D characters in response to viewer chat commands.',
+    technologies: [
+      'C#',
+      'Streamer.bot',
+      'Twitch',
+      'Automation',
+    ],
+    highlights: [
+      'Processes viewer-triggered Twitch commands through Streamer.bot.',
+      'Generates six ability scores using a 4d6-drop-lowest algorithm.',
+      'Creates a random race and class, calculates modifiers, and posts the formatted result to chat.',
+    ],
+    repositoryUrl:
+      'https://github.com/celinem13/Twitch-Streamer.bot-Chat-Automation',
+  },
+  {
+    id: 'portfolio-site',
+    category: 'Frontend · React',
+    title: 'Developer Portfolio',
+    description:
+      'A responsive personal portfolio built to showcase software engineering experience, technical projects, and skills.',
+    technologies: [
+      'React',
+      'Vite',
+      'JavaScript',
+      'CSS',
+      'GitHub Pages',
+    ],
+    highlights: [
+      'Built a reusable React interface for projects, experience, and technical skills.',
+      'Structured portfolio content as reusable data to make new projects and roles easy to add.',
+      'Deployed the site with GitHub Pages and maintained it through Git-based development.',
+    ],
+    repositoryUrl:
+      'https://github.com/celinem13/celinem13.github.io',
+  },
 ]
 
 export const experiences = [
   {
+    id: 'boys-and-girls-club',
+    period: 'October 2025 — Present',
+    role: 'Activity Leader',
+    company: 'Boys and Girls Club of Laguna Beach',
+    highlights: [
+      'Support youth educational programming and structured daily activities.',
+      'Communicate with students, staff, and families while adapting to changing needs and priorities.',
+      'Help maintain a safe, organized environment while supporting learning and engagement.',
+    ],
+  },
+  {
     id: 'brainstorm-stem',
-    period: 'July 2025 — Present',
+    period: 'June 2025 — Jul 2025',
     role: 'STEM Instructor',
     company: 'BrainStorm STEM Education',
     highlights: [
@@ -90,9 +185,53 @@ export const experiences = [
     role: 'Software Engineer — Flight Data',
     company: 'Naval Air Warfare Center (NAVAIR)',
     highlights: [
-      'Automated flight-data workflows with Python and SQL, reducing analysis time by approximately 95%.',
-      'Built dashboards to examine more than 10 GB of aviation performance data and KPIs.',
-      'Developed software supporting F-16 flight-data analysis in a secure engineering environment.',
+      'Automated engineering-data workflows with Python and SQL for F-16 simulation and mission-modeling systems.',
+      'Reduced a heavily manual processing workflow from weeks to hours through software automation.',
+      'Tested, debugged, and validated outputs while collaborating with engineers on requirements and software designs.',
+    ],
+  },
+  {
+    id: 'dynamic-augmented-solutions',
+    period: 'December 2022 — February 2023',
+    role: 'Augmented Reality Engineer',
+    company: 'Dynamic Augmented Solutions',
+    highlights: [
+      'Developed and debugged C# and Unity applications for Oculus Quest and Microsoft HoloLens.',
+      'Prototyped interactive training features, controls, and visual guidance for immersive applications.',
+      'Tested software across hardware platforms and iterated on features based on project requirements and team feedback.',
+    ],
+  },
+  {
+    id: 'avenda-health',
+    period: 'January 2022 — April 2022',
+    role: 'Augmented Reality Engineer',
+    company: 'Dynamic Augmented Solutions',
+    highlights: [
+      'Developed a user-facing signup experience using JavaScript, HTML, and CSS.',
+      'Processed and validated healthcare datasets supporting machine-learning workflows.',
+      'Prototyped Python-based AI/ML techniques while collaborating in an iterative software-development environment.',
+    ],
+  },
+  {
+    id: 'cpp-it',
+    period: 'September 2019 — November 2021',
+    role: 'Augmented Reality Engineer',
+    company: 'Dynamic Augmented Solutions',
+    highlights: [
+      'Provided technical support for users by troubleshooting hardware, software, account, and connectivity issues.',
+      'Set up and maintained computers, peripherals, and software while documenting recurring technical problems and solutions.',
+      'Assisted students and staff with technology issues, communicating technical steps clearly and escalating more complex problems when needed.',
+    ],
+  },
+  {
+    id: 'coding-minds',
+    period: 'October 2018 — September 2019',
+    role: 'Augmented Reality Engineer',
+    company: 'Dynamic Augmented Solutions',
+    highlights: [
+      'Taught C++, Java, and Python through hands-on programming projects.',
+      'Covered OOP, data structures, algorithms, debugging, and problem-solving fundamentals.',
+      'Helped students troubleshoot code and communicate technical concepts clearly.',
     ],
   },
 ]
@@ -100,12 +239,29 @@ export const experiences = [
 export const skillGroups = [
   {
     category: 'Languages',
-    skills: ['Python', 'C++', 'JavaScript', 'Java', 'SQL', 'R'],
+    skills: [
+      'Python',
+      'C++',
+      'Java',
+      'C#',
+      'JavaScript',
+      'SQL',
+      'C',
+      'R',
+    ],
   },
+
   {
     category: 'Frontend',
-    skills: ['React', 'Vite', 'HTML', 'CSS', 'React Router'],
+    skills: [
+      'React',
+      'Vite',
+      'HTML',
+      'CSS',
+      'React Router',
+    ],
   },
+
   {
     category: 'Backend and data',
     skills: [
@@ -115,21 +271,46 @@ export const skillGroups = [
       'MongoDB Atlas',
       'MySQL',
       'SQL Server',
+      'JWT',
       'Pandas',
       'NumPy',
     ],
   },
+
   {
-    category: 'Engineering tools',
+    category: 'Application and systems',
     skills: [
-      'Git',
-      'GitHub',
+      'Qt 6',
+      'Unity',
       'CMake',
       'CTest',
       'Linux / WSL',
-      'Postman',
+      'Bash',
+    ],
+  },
+
+  {
+    category: 'Software engineering',
+    skills: [
+      'Object-Oriented Programming',
+      'Data Structures & Algorithms',
+      'Debugging',
+      'Testing',
+      'Automated Testing',
+      'Requirements Analysis',
+      'Git',
+      'GitHub',
       'JIRA',
-      'AWS',
+      'Agile / Scrum',
+    ],
+  },
+
+  {
+    category: 'Development tools',
+    skills: [
+      'VS Code',
+      'Visual Studio',
+      'Postman',
     ],
   },
 ]
