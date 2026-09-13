@@ -1,121 +1,167 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
 
+const strengths = [
+  {
+    label: 'Experience',
+    value: 'Flight-data automation',
+  },
+  {
+    label: 'Primary tools',
+    value: 'Python · SQL · React · C++',
+  },
+  {
+    label: 'Perspective',
+    value: 'Engineering + technical education',
+  },
+]
+
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="site-shell" id="top">
+      <a className="skip-link" href="#main-content">
+        Skip to content
+      </a>
 
-      <div className="ticks"></div>
+      <header className="site-header">
+        <a className="wordmark" href="#top" aria-label="Celine Mangahas home">
+          <span className="wordmark-initials" aria-hidden="true">
+            CM
+          </span>
+          <span>Celine Mangahas</span>
+        </a>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+        <nav className="site-nav" aria-label="Primary navigation">
+          <a href="#work">Work</a>
+          <a
+            href="https://github.com/celinem13"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+        </nav>
+      </header>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      <main id="main-content">
+        <section className="hero">
+          <div className="hero-copy">
+            <p className="eyebrow">
+              Software Engineer <span aria-hidden="true">•</span> Orange County,
+              California
+            </p>
+
+            <h1>Turning complex data into software people can trust.</h1>
+
+            <p className="hero-intro">
+              I&apos;m Celine, a software engineer with experience building
+              Python and SQL flight-data workflows and hands-on projects across
+              React, Node.js, C++, and data analysis.
+            </p>
+
+            <div className="hero-actions">
+              <a className="button button-primary" href="#work">
+                Explore selected work
+              </a>
+
+              <a
+                className="button button-secondary"
+                href="https://github.com/celinem13"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View GitHub
+              </a>
+            </div>
+          </div>
+
+          <aside className="profile-panel" aria-label="Engineering profile">
+            <p className="panel-number">01 / Engineering profile</p>
+
+            <h2>
+              Full-stack development, systems programming, and applied data.
+            </h2>
+
+            <dl>
+              <div>
+                <dt>Focus</dt>
+                <dd>Reliable, user-focused software</dd>
+              </div>
+
+              <div>
+                <dt>Foundation</dt>
+                <dd>B.S. in Computer Science</dd>
+              </div>
+
+              <div>
+                <dt>Background</dt>
+                <dd>Aviation engineering and STEM education</dd>
+              </div>
+            </dl>
+          </aside>
+        </section>
+
+        <section className="strengths" aria-label="Technical strengths">
+          {strengths.map((strength) => (
+            <div className="strength" key={strength.label}>
+              <p>{strength.label}</p>
+              <strong>{strength.value}</strong>
+            </div>
+          ))}
+        </section>
+
+        <section className="work-section" id="work">
+          <div className="section-heading">
+            <p className="section-number">02 / Selected work</p>
+            <h2>Engineering projects with a clear purpose.</h2>
+            <p>
+              My projects explore aviation systems, full-stack communities,
+              data analysis, and tools for online creators.
+            </p>
+          </div>
+
+          <article className="project-card">
+            <div className="project-summary">
+              <p className="project-category">Featured project · C++</p>
+              <h3>Cockpit Telemetry Monitor</h3>
+              <p>
+                A C++ application that simulates cockpit telemetry, evaluates
+                aircraft readings, and surfaces warnings for conditions such as
+                elevated engine temperature and low fuel.
+              </p>
+
+              <div className="tag-list" aria-label="Project technologies">
+                <span>C++</span>
+                <span>CMake</span>
+                <span>CTest</span>
+                <span>Linux</span>
+              </div>
+            </div>
+
+            <div className="project-details">
+              <ul>
+                <li>Separated telemetry and warning logic into reusable code.</li>
+                <li>Added automated tests for safety-related warning rules.</li>
+                <li>Built the project with a repeatable CMake workflow.</li>
+              </ul>
+
+              <a
+                className="project-link"
+                href="https://github.com/celinem13/cockpit-telemetry-monitor"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View repository <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <footer className="site-footer">
+        <p>© 2026 Celine Mangahas</p>
+        <a href="#top">Back to top</a>
+      </footer>
+    </div>
   )
 }
 
