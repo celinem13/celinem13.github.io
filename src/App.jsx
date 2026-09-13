@@ -75,6 +75,31 @@ const projects = [
   },
 ]
 
+const experiences = [
+  {
+    id: 'brainstorm-stem',
+    period: 'July 2025 — Present',
+    role: 'STEM Instructor',
+    company: 'BrainStorm STEM Education',
+    highlights: [
+      'Teach robotics, physics, engineering, Scratch, and Python to students in grades 1–6.',
+      'Turn technical concepts into hands-on lessons, demonstrations, and coding activities.',
+      'Adapt instruction and troubleshooting support for different ages and experience levels.',
+    ],
+  },
+  {
+    id: 'navair',
+    period: 'July 2023 — November 2023',
+    role: 'Software Engineer — Flight Data',
+    company: 'Naval Air Warfare Center (NAVAIR)',
+    highlights: [
+      'Automated flight-data workflows with Python and SQL, reducing analysis time by approximately 95%.',
+      'Built dashboards to examine more than 10 GB of aviation performance data and KPIs.',
+      'Developed software supporting F-16 flight-data analysis in a secure engineering environment.',
+    ],
+  },
+]
+
 function App() {
   return (
     <div className="site-shell" id="top">
@@ -92,6 +117,7 @@ function App() {
 
         <nav className="site-nav" aria-label="Primary navigation">
           <a href="#work">Work</a>
+          <a href="#experience">Experience</a>
           <a
             href="https://github.com/celinem13"
             target="_blank"
@@ -185,6 +211,41 @@ function App() {
             ))}
           </div>
 
+        </section>
+        
+        <section className="experience-section" id="experience">
+          <div className="section-heading">
+            <p className="section-number">03 / Experience</p>
+
+            <h2>Software, data, and technical education.</h2>
+
+            <p>
+              My background combines aviation software with technical
+              education, giving me experience both building systems and
+              explaining complex ideas clearly.
+            </p>
+          </div>
+
+          <div className="experience-list">
+            {experiences.map((experience) => (
+              <article className="experience-item" key={experience.id}>
+                <div className="experience-meta">
+                  <p>{experience.period}</p>
+                </div>
+
+                <div className="experience-content">
+                  <p className="experience-company">{experience.company}</p>
+                  <h3>{experience.role}</h3>
+
+                  <ul>
+                    {experience.highlights.map((highlight) => (
+                      <li key={highlight}>{highlight}</li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            ))}
+          </div>
         </section>
       </main>
 
