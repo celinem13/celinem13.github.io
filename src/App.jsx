@@ -1,4 +1,5 @@
 import './App.css'
+import ProjectCard from './components/ProjectCard'
 
 const strengths = [
   {
@@ -12,6 +13,65 @@ const strengths = [
   {
     label: 'Perspective',
     value: 'Engineering + technical education',
+  },
+]
+
+const projects = [
+  {
+    id: 'cockpit-telemetry-monitor',
+    category: 'Systems engineering · C++',
+    title: 'Cockpit Telemetry Monitor',
+    description:
+      'A real-time aircraft telemetry simulator and cockpit-style Qt dashboard that evaluates flight readings and displays warning conditions.',
+    technologies: ['C++17', 'Qt 6', 'CMake', 'CTest', 'WSL 2'],
+    highlights: [
+      'Simulates airspeed, altitude, heading, engine temperature, and fuel.',
+      'Separates shared telemetry logic from the console and graphical interfaces.',
+      'Includes automated tests for high-temperature and low-fuel warnings.',
+    ],
+    repositoryUrl:
+      'https://github.com/celinem13/cockpit-telemetry-monitor',
+  },
+  {
+    id: 'nerdnest',
+    category: 'Full-stack application',
+    title: 'NerdNest',
+    description:
+      'A community platform that helps people create profiles, discover local interest groups, and connect through posts and events.',
+    technologies: [
+      'React',
+      'Vite',
+      'Node.js',
+      'Express',
+      'MongoDB',
+      'JWT',
+    ],
+    highlights: [
+      'Built registration, login, and session restoration with JWT authentication.',
+      'Created REST API endpoints for profiles, posts, and events.',
+      'Connected a React interface to an Express API and MongoDB Atlas database.',
+    ],
+    repositoryUrl: 'https://github.com/celinem13/NerdNest',
+  },
+  {
+    id: 'kaizo-ironmon-analysis',
+    category: 'Data analysis · R and Python',
+    title: 'Kaizo Ironmon Analysis',
+    description:
+      'An exploratory and statistical analysis of 467 Pokémon FireRed and LeafGreen Kaizo Ironmon runs.',
+    technologies: [
+      'R',
+      'Python',
+      'Pandas',
+      'ggplot2',
+      'Statistical analysis',
+    ],
+    highlights: [
+      'Examined Pokémon stats, types, moves, rankings, and win outcomes.',
+      'Tested variable distributions using the Shapiro–Wilk test.',
+      'Found that Speed was not significantly associated with winning in the analyzed data.',
+    ],
+    repositoryUrl: 'https://github.com/celinem13/KaizoIronmonData',
   },
 ]
 
@@ -114,46 +174,17 @@ function App() {
             <p className="section-number">02 / Selected work</p>
             <h2>Engineering projects with a clear purpose.</h2>
             <p>
-              My projects explore aviation systems, full-stack communities,
-              data analysis, and tools for online creators.
+              My projects explore aviation systems, full-stack communities, and
+              data analysis.
             </p>
           </div>
 
-          <article className="project-card">
-            <div className="project-summary">
-              <p className="project-category">Featured project · C++</p>
-              <h3>Cockpit Telemetry Monitor</h3>
-              <p>
-                A C++ application that simulates cockpit telemetry, evaluates
-                aircraft readings, and surfaces warnings for conditions such as
-                elevated engine temperature and low fuel.
-              </p>
+          <div className="project-list">
+            {projects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
 
-              <div className="tag-list" aria-label="Project technologies">
-                <span>C++</span>
-                <span>CMake</span>
-                <span>CTest</span>
-                <span>Linux</span>
-              </div>
-            </div>
-
-            <div className="project-details">
-              <ul>
-                <li>Separated telemetry and warning logic into reusable code.</li>
-                <li>Added automated tests for safety-related warning rules.</li>
-                <li>Built the project with a repeatable CMake workflow.</li>
-              </ul>
-
-              <a
-                className="project-link"
-                href="https://github.com/celinem13/cockpit-telemetry-monitor"
-                target="_blank"
-                rel="noreferrer"
-              >
-                View repository <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </article>
         </section>
       </main>
 
