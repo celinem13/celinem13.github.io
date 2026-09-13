@@ -7,7 +7,7 @@ function AboutSection() {
         <div className="about-copy">
           <p className="section-number">05 / About and education</p>
 
-          <h2>Building software—and helping others understand it.</h2>
+          <h2>Building software — and helping others understand it.</h2>
 
           <div className="about-text">
             <p>
