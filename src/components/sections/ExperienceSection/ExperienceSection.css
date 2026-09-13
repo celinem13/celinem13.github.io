@@ -1,0 +1,61 @@
+.experience-section {
+  padding-block: clamp(5rem, 10vw, 8rem);
+  border-top: 1px solid var(--border);
+  scroll-margin-top: 6rem;
+}
+
+.experience-list {
+  margin-top: 3rem;
+  border-top: 1px solid var(--border);
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: 13rem minmax(0, 1fr);
+  gap: clamp(2rem, 7vw, 6rem);
+  padding-block: 2.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.experience-meta p {
+  margin: 0;
+  color: var(--accent);
+  font-family: Consolas, Monaco, monospace;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.experience-company {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.experience-content h3 {
+  margin: 0.5rem 0 1.25rem;
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  letter-spacing: -0.025em;
+}
+
+.experience-content ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--muted);
+}
+
+.experience-content li {
+  padding-left: 0.4rem;
+  line-height: 1.7;
+}
+
+.experience-content li + li {
+  margin-top: 0.7rem;
+}
+
+@media (max-width: 820px) {
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

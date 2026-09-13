@@ -1,13 +1,16 @@
-import './App.css'
-import SiteFooter from './components/layout/SiteFooter'
-import SiteHeader from './components/layout/SiteHeader'
-import AboutSection from './components/sections/AboutSection'
-import ContactSection from './components/sections/ContactSection'
-import ExperienceSection from './components/sections/ExperienceSection'
-import HeroSection from './components/sections/HeroSection'
-import ProjectsSection from './components/sections/ProjectsSection'
-import SkillsSection from './components/sections/SkillsSection'
-import StrengthsSection from './components/sections/StrengthsSection'
+import "./App.css";
+
+import { SiteFooter, SiteHeader } from "./components/layout/index.js";
+
+import {
+  AboutSection,
+  ContactSection,
+  ExperienceSection,
+  HeroSection,
+  ProjectsSection,
+  SkillsSection,
+  StrengthsSection,
+} from "./components/sections/index.js";
 
 function App() {
   return (

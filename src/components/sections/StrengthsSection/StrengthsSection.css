@@ -1,0 +1,36 @@
+.strengths {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-block: 1px solid var(--border);
+}
+
+.strength {
+  min-width: 0;
+  padding: 1.75rem;
+}
+
+.strength + .strength {
+  border-left: 1px solid var(--border);
+}
+
+.strength p {
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.strength strong {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 820px) {
+  .strengths {
+    grid-template-columns: 1fr;
+  }
+
+  .strength + .strength {
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+}

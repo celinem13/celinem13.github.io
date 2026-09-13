@@ -1,4 +1,5 @@
-import { strengths } from '../../data/portfolioData'
+import { strengths } from '../../../data/portfolioData'
+import './StrengthsSection.css'
 
 function StrengthsSection() {
   return (

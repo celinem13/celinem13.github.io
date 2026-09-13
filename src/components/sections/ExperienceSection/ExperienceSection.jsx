@@ -1,4 +1,5 @@
-import { experiences } from '../../data/portfolioData'
+import { experiences } from "../../../data/portfolioData";
+import "./ExperienceSection.css";
 
 function ExperienceSection() {
   return (

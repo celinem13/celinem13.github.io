@@ -1,4 +1,5 @@
-import { skillGroups } from '../../data/portfolioData'
+import { skillGroups } from "../../../data/portfolioData";
+import "./SkillsSection.css";
 
 function SkillsSection() {
   return (
