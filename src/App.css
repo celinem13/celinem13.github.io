@@ -36,6 +36,7 @@
 .strengths,
 .work-section,
 .experience-section,
+.skills-section,
 .site-footer {
   width: min(1120px, calc(100% - 2.5rem));
   margin-inline: auto;
@@ -400,6 +401,52 @@
   margin-top: 0.7rem;
 }
 
+.skills-section {
+  padding-block: clamp(5rem, 10vw, 8rem);
+  border-top: 1px solid var(--border);
+  scroll-margin-top: 6rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 3rem;
+  border: 1px solid var(--border);
+  background: var(--border);
+}
+
+.skill-group {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  background: var(--background);
+}
+
+.skill-group h3 {
+  margin: 0;
+  color: var(--accent);
+  font-family: Consolas, Monaco, monospace;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skill-list li {
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: rgba(16, 36, 58, 0.52);
+  font-size: 0.9rem;
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -497,6 +544,18 @@ a:focus-visible {
 
   .site-footer {
     flex-direction: column;
+  }
+
+  .site-nav {
+    gap: 0.75rem;
+  }
+
+  .site-nav a {
+    font-size: 0.82rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 }
 

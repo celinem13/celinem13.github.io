@@ -100,6 +100,43 @@ const experiences = [
   },
 ]
 
+const skillGroups = [
+  {
+    category: 'Languages',
+    skills: ['Python', 'C++', 'JavaScript', 'Java', 'SQL', 'R'],
+  },
+  {
+    category: 'Frontend',
+    skills: ['React', 'Vite', 'HTML', 'CSS', 'React Router'],
+  },
+  {
+    category: 'Backend and data',
+    skills: [
+      'Node.js',
+      'Express',
+      'REST APIs',
+      'MongoDB Atlas',
+      'MySQL',
+      'SQL Server',
+      'Pandas',
+      'NumPy',
+    ],
+  },
+  {
+    category: 'Engineering tools',
+    skills: [
+      'Git',
+      'GitHub',
+      'CMake',
+      'CTest',
+      'Linux / WSL',
+      'Postman',
+      'JIRA',
+      'AWS',
+    ],
+  },
+]
+
 function App() {
   return (
     <div className="site-shell" id="top">
@@ -118,6 +155,7 @@ function App() {
         <nav className="site-nav" aria-label="Primary navigation">
           <a href="#work">Work</a>
           <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
           <a
             href="https://github.com/celinem13"
             target="_blank"
@@ -243,6 +281,33 @@ function App() {
                     ))}
                   </ul>
                 </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="skills-section" id="skills">
+          <div className="section-heading">
+            <p className="section-number">04 / Technical toolkit</p>
+
+            <h2>Tools I use to build, test, and understand software.</h2>
+
+            <p>
+              My toolkit spans full-stack application development, data
+              workflows, systems programming, and collaborative engineering.
+            </p>
+          </div>
+
+          <div className="skills-grid">
+            {skillGroups.map((group) => (
+              <article className="skill-group" key={group.category}>
+                <h3>{group.category}</h3>
+
+                <ul className="skill-list">
+                  {group.skills.map((skill) => (
+                    <li key={skill}>{skill}</li>
+                  ))}
+                </ul>
               </article>
             ))}
           </div>
